@@ -1,0 +1,19 @@
+<section class="experience">
+    <div class="container">
+        <h2 class="title">{{module.title}}</h2>
+    </div>
+    <div class="container full" style="background-image: url({{module.background_image.url}});">
+        <div class="experience-list">
+            {% for item in module.text_items %}
+            <div class="experience-item">
+                <div class="experience-text">
+                    {{item.description}}
+                </div>
+                <div class="experience-item-icon">
+                    <img src="{{item.item_icon.url}}" alt="{{item.item_icon.alt}}">
+                </div>
+            </div>    
+            {% endfor %}
+        </div>    
+    </div>
+</section>

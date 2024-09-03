@@ -1,0 +1,17 @@
+<section class="partners">
+    <div class="container">
+        <div class="partners-list">
+        {% for item in module.partners_list %}
+            <div class="partners-item">
+                <img src="{{item.partners_logo.url}}" alt="{{item.partners_logo.alt}}">
+            </div>
+        {% endfor %}    
+        </div>
+        <div class="partners-video">
+            <video autoplay muted loop>
+                <source src="{{module.video_url}}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>    
+        </div>
+    </div>
+</section>

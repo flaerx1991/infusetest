@@ -1,0 +1,242 @@
+header {
+    color:$black;
+    font-size: 16px;
+    padding: 32px 0;
+    box-shadow: 0px 4px 6.4px 0px #0000001A;
+    background-color: $white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    @media (min-width: $mediaTabletMax + 1px) {
+        padding:53px 0;
+    }
+    .container{
+        flex-direction: row-reverse;
+        @media (min-width: $mediaTabletMax + 1px) {
+            flex-direction: row;
+            
+        }
+        .menu-container{
+            
+            @media (min-width: $mediaTabletMax + 1px) {
+                max-width: 901px;
+                width: 100%;
+            }
+            .main-menu{
+                display: none;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                flex-direction: column;
+                background-color: white;
+                top: 100px;
+                padding: 0 20px;
+                z-index: 9;
+               
+                .menu-item{
+                    position: relative;
+                    padding: 10px 0;
+                    a{
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 20px;
+                        letter-spacing: -1px;                      
+                        color:$blue;
+                        text-decoration: none;
+                        display: flex; 
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 9.34px;
+                        span{
+                            display: flex;
+                        }
+                    }
+                    .sub-menu{
+                        display: flex;
+                        flex-direction: column;
+                        gap:20px;
+                        visibility: hidden;
+                        z-index: -1;
+                        position: absolute;
+                        background-color: $white;
+                        box-shadow: 0px 4px 6.4px 0px #0000001A;
+                        top: 30px;
+                        width: 150%;
+                        padding: 10px;
+                        opacity: 0;
+                        transition: all 0.4s ease;
+                        .sub-menu-item{
+                            a{
+                                color:$blue;
+                                text-decoration: none;
+                                &:hover {
+                                    color: $red; 
+                                }
+                            }
+                        }
+                    }
+                    .open{
+                        
+                        @media (max-width: $mediaTabletMax ) {
+                            opacity: 1;
+                            visibility: visible;
+                            display: flex;
+                            position: relative;
+                            width: 100%;
+                            box-shadow: none;
+                            margin-bottom: 10px;
+                            top:0;
+                        }
+                    }
+                    @media (min-width: $mediaTabletMax + 1px) {
+                        &:hover {
+                            .sub-menu{
+                                opacity: 1;
+                                visibility: visible;
+                                z-index: 2;    
+                            }
+                            a{
+                                color:$red;
+                                span{
+                                    transform: rotate(180deg);
+                                    svg{
+                                        path{
+                                            fill:$red;
+                                        }
+                                    }
+                                }
+                            }
+                        
+                        }
+                    }
+                    
+                    &:nth-of-type(4){
+                        flex-grow: 0;
+                        @media (min-width:$mediaTabletMax + 1px) {
+                            
+                            flex-grow: 1;
+                            
+                        }
+                    }
+                    
+                }
+                @media (min-width:$mediaTabletMax + 1px) {
+                    display:flex;
+                    position: relative;
+                    padding: 0;
+                    gap:36px;
+                    flex-direction: row;
+                    height: auto;
+                    top: unset;
+                }
+            }
+            .show {
+                display: flex;
+                position: absolute;
+                @media (min-width:$mediaTabletMax + 1px) {
+                    position: relative;
+                }
+            }
+            .menu-btn {
+                position: relative;
+                display: none;
+                justify-content: center;
+                align-items: center;
+                width: 43px;
+                height: 25px;
+                cursor: pointer;
+                z-index: 2;
+                @media (max-width: $mediaTabletMax ) {
+                  display: flex;
+                }
+                .menu-btn__lines,
+                .menu-btn__lines::before,
+                .menu-btn__lines::after {
+                  width: 34px;
+                  height: 4px;
+                  background: $blue;
+                  transition: all 0.4s ease-in-out;
+                }
+                .menu-btn__lines {
+                  &::before,
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    width: 43px;
+                  }
+                  &::before {
+                    transform: translateY(-0.7rem);
+                  }
+                  &::after {
+                    transform: translateY(0.7rem);
+                  }
+                }
+                &.open {
+                  .menu-btn__lines {
+                    transform: translateX(1rem);
+                    background: transparent;
+                    &::before {
+                      transform: rotate(45deg) translate(-0.5rem, 0.5rem);
+                      background: $blue;
+                    }
+                    &::after {
+                      transform: rotate(-45deg) translate(-0.5rem, -0.5rem);
+                      background: $blue;
+                    }
+                  }
+                }
+              }
+              
+              .expand-btn {
+                &:after {
+                  position: absolute;
+                  top: 50%;
+                  right: 0;
+                  content: " \25BE";
+                  opacity: 0.75;
+                  transform: translateY(-50%) rotate(0);
+                  transition: 0.25s;
+                }
+                &.open {
+                  color: #ff5722;
+                  &:after {
+                    transform: translateY(-50%) rotate(180deg);
+                  }
+                }
+              }
+
+        } 
+        .contact-col{
+            a{
+                color: $red;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+                display: flex;
+                align-items: center;
+                gap: 18px;
+                .ct-title{
+                    display: none;
+                }
+                .ct-arrow{
+                    display: none;
+                }   
+                @media (min-width: $mediaTabletMax ) {
+                    padding: 15px 21px 14px 21px;
+                    border: 2px solid $red;
+                    .ct-title{
+                        display: block;
+                    }
+                    .ct-arrow{
+                        display: block;
+                    }
+                    .ct-enveloped{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+} 

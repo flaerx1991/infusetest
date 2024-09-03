@@ -1,0 +1,37 @@
+<section class="review-slider">
+    <div class="container">
+       
+            <div class="review-slider-heading flex">
+                <h2 class="title">{{module.title}}</h2>
+                <div class="slider-controls">
+                    <div class="button-prev">
+                        <svg width="17" height="31" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.2734 1.34375L1.99974 15.6174L16.2734 29.8911" stroke="#787878" stroke-width="2"/></svg>
+                    </div>
+                    <div class="button-next">
+                        <svg width="17" height="31" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.27344 29.8906L15.5471 15.6169L1.27344 1.34323" stroke="#787878" stroke-width="2"/></svg>
+                    </div>
+                </div>
+            </div>
+            <div class="review-slider-container">
+                <div class="swiper-container"> 
+                    <div class="swiper-wrapper">
+                        {% for item in module.reviews_list %}
+                        <div class="swiper-slide">
+                            <div class="review-slider-item">
+                                <div class="review-slider-item-content">
+                                    <p>{{item.review}}</p>
+                                </div>
+                                <div class="review-slider-item-author">
+                                    <p class="position">{{item.position}}</p>
+                                    <p>{{item.author}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        
+    </div>
+</section> 

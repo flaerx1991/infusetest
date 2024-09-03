@@ -1,0 +1,29 @@
+<section class="review-slider">
+    <div class="container">
+        <div class="review-slider__wrapper">
+            <div class="review-slider__title">
+                <h2>{{module.title}}</h2>
+            </div>
+            <div class="review-slider__slider">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        {% for item in module.reviews_list %}
+                        <div class="swiper-slide">
+                            <div class="review-slider__item">
+                                <div class="review-slider__item__content">
+                                    <p>{{item.review}}</p>
+                                </div>
+                                <div class="review-slider__item__author">
+                                    <p>{{item.position}}</p>
+                                    <p>{{item.author}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 

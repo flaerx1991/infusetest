@@ -1,0 +1,27 @@
+.grid {
+    display: grid;
+}
+.flex {
+    display:flex
+}
+.align-center{
+    align-items: center;
+}
+.center{
+    justify-content: center;
+}
+.space-between{
+    justify-content: space-between;
+}
+.container {
+    max-width: 1176px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.lock{
+    overflow:hidden !important;
+    @media (min-width:$mediaTabletMax + 1px) {
+        overflow:unset !important;
+        overflow-x: hidden !important;
+    }
+}

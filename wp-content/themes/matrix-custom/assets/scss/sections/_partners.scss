@@ -1,0 +1,31 @@
+.partners{
+    width: 100%;
+    padding: 70px 0;
+        .container{
+           .partners-list{
+                display:flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                column-gap: 28px;
+                row-gap: 30px;
+                .partners-item{
+                   img{
+                        width: 100%;
+                   } 
+                }
+                @media (min-width: $mediaTabletMax){
+                    display:none;
+               }
+           }
+           
+           .partners-video{
+            display: none;
+            @media (min-width: $mediaTabletMax){
+                display: block;
+                video{
+                    width: 100%;
+                }
+            }
+           }
+        }
+}

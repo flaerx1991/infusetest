@@ -1,0 +1,17 @@
+<footer>
+<div class="container">
+    <div class="footer-wrap">
+            <div class="footer-menu">
+        {% for item in options.footer_menu %}
+                <a href="{{item.footer_link.url}}" class="footer-link">{{item.footer_link.title}}</a>
+        {% endfor %}
+            </div>
+            <div class="copyright">
+            <p>{{options.credentials_text}}</p>
+            </div>
+    </div>
+   
+</div>
+   
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>   
+</footer>

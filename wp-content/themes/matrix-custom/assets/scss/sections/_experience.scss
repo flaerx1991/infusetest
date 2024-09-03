@@ -1,0 +1,89 @@
+.experience{
+    padding-bottom: 32px;
+    .container{
+        background-image: none!important;
+        .title{
+            text-align: center;
+            line-height: 44px;
+            margin-bottom: 26px;
+            @media (min-width: $mediaTabletMax){
+                text-align: left;
+                max-width: 640px;
+            }
+        }
+        .experience-list{
+            display: flex;
+            flex-direction: column;
+            background-color: $white;
+            row-gap: 50px;
+            @media (min-width: $mediaTabletMax){
+                box-shadow: 0px 0px 13.2px 0px rgba(0, 0, 0, 0.10);
+                max-width: 674px;
+                padding: 94px 52px;
+            }
+           
+            .experience-item{
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                border-bottom: 1px solid $lightgray;
+                padding-bottom: 45px;
+                row-gap: 20px;
+                @media (min-width: $mediaTabletMax){
+                    flex-direction: row;
+                    
+                    align-items: center;
+                    justify-content: space-between;
+                    column-gap: 20px;
+                }
+                .experience-text{
+                    text-align: center;
+                    @media (min-width: $mediaTabletMax){
+                        max-width: 410px;
+                        font-size: 18px; 
+                        text-align: left;
+    
+                    }
+                }
+                .experience-item-icon{
+                    max-width: 89px;
+                    img{
+                        width: 100%;
+                    }
+                    @media (min-width: $mediaTabletMax){
+                        max-width: unset!important;
+                    }
+                }
+                &:nth-of-type(2){
+                    .experience-item-icon{
+                        max-width: 69px;
+                    }
+                    @media (min-width: $mediaTabletMax){
+                        padding-right: 16px;
+                    }
+                }
+                &:last-of-type{
+                    border-bottom: none;
+                    padding-bottom: 0;
+                    .experience-item-icon{
+                        max-width: 51px;
+                    }
+                    @media (min-width: $mediaTabletMax){
+                        padding-right: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .full{
+        @media (min-width: $mediaTabletMax){
+            background-image: url(https://infuse.diurnal.com.ua/wp-content/uploads/2024/08/bg.png)!important;
+            background-size: cover;
+            background-repeat: no-repeat;
+            max-width: 1366px;
+            display: flex;
+            padding: 53px 26px 61px;
+            justify-content: end; 
+        }
+    }
+}

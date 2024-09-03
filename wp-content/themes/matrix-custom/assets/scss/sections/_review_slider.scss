@@ -1,0 +1,110 @@
+.review-slider{
+    width: 100%;
+    padding-top: 32px;
+        padding-bottom: 58px;
+    @media (min-width: $mediaTabletMin) {
+        padding-top: 60px;
+        padding-bottom: 140px;
+    }
+    .container{
+        .review-slider-heading{
+            justify-content: space-between;
+            margin-bottom: 39px;
+            .title{
+                max-width: 814px;
+                text-align: center;
+                @media (min-width: $mediaTabletMin) {
+                    text-align: left;
+                }
+            }
+            .slider-controls{
+                display: none;
+                @media (min-width: $mediaTabletMin) {
+                    display:flex;
+                    gap: 6px;
+                    .button-next,.button-prev{
+                        border:2px solid $darkgray;
+                        width: 49px;
+                        height: 49px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center; 
+                        cursor: pointer;
+                        &:hover{
+                            border-color: $red;
+                            svg path{
+                                stroke: $red;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+        .review-slider-container{
+            overflow: hidden;
+            .swiper-container{
+                width: 100%;
+                max-width: 1176px;
+                .swiper-wrapper{
+                    flex-direction: column;
+                    gap: 20px;
+                    @media (min-width: $mediaTabletMin) {
+                        flex-direction: row;
+                        gap: unset
+                    }
+                    .swiper-slide{
+                        display:flex;
+                        flex-direction: column;
+                        overflow: visible;
+                       .review-slider-item{
+                            width: 100%;
+                            max-width: 658px;
+                           
+                            background-color:#0D73C20D;
+                            padding: 40px 25px;
+                           
+                            @media (min-width: $mediaTabletMin) {
+                                padding: 41px 64px;
+                                background-image: url(https://infuse.diurnal.com.ua/wp-content/uploads/2024/08/slider-bg-img.svg);
+                                background-repeat: no-repeat;
+                                background-position: 95% 50%;
+                            }
+                            .review-slider-item-content{
+                                margin-bottom: 20px;
+                                p{
+                                    color: #2B2B2B;
+                                    font-size: 18px;
+                                    font-style: normal;
+                                    font-weight: 300;
+                                    line-height: 27px;
+                                    letter-spacing: 0.7px;
+                                }
+                            }
+                            .review-slider-item-author{
+                                p{
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 300;
+                                    line-height: 19px;
+                                    @media (min-width: $mediaTabletMin) {
+                                    line-height: 30px; 
+                                    }
+                                }
+                                p.position{
+                                    font-weight: 500;
+                                    text-transform: uppercase;
+                                    line-height: 19px;
+                                    @media (min-width: $mediaTabletMin) {
+                                        line-height: 30px; 
+                                    }
+                                }
+                            }
+                       }
+                    }
+                    
+                }
+            }
+        }
+    }
+}

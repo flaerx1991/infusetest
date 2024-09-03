@@ -1,0 +1,47 @@
+
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); // Montserrat
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); // Roboto
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+h1,h2,h3,h4,h5{
+    color:$black;
+    font-size: inherit;
+    font-family: "Lexend", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: $black;
+    text-decoration: none;
+    &:hover {
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+// @font-face {
+//     font-family: 'Verdana Pro';
+//     src:url('../fonts/VerdanaPro-Regular.woff2') format('woff2'),
+//         url('../fonts/VerdanaPro-Regular.woff') format('woff'),
+//         url('../fonts/fonts/VerdanaPro-Regular.ttf') format('truetype');
+//     font-weight: 400;
+//     font-style: normal;
+// }
+.title{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48.24px;
+    color:$black;
+    text-transform: uppercase;
+    @media (min-width: $mediaTabletMin) {
+       font-size: 48.24px;
+       line-height: 48.24px; 
+    }
+}
+.description{
+    font-size: 16px;
+    line-height: 24.96px;
+    color: $darkgray;
+    text-transform: uppercase;
+}
